@@ -1,103 +1,79 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<script src="jQuery/jquery-1.8.3.min.js"></script>
-	<style>
-		*{margin:0;padding: 0;}
-		.outer{
-			width: 600px;
-			height: 300px;
-			border: 1px solid #000;
-			overflow: hidden;
-		}
-		.con{
-			width: 3000px;
-			height: 300px;
-			list-style: none;
-			overflow: hidden;
-		}
-		.con li{
-			width: 600px;
-			height: 300px;
-			float: left;
-		}
-		.con li:nth-child(1){
-			background:red;
-		}
-		.con li:nth-child(2){
-			background:green;
-		}
-		.con li:nth-child(3){
-			background:yellow;
-		}
-		.con li:nth-child(4){
-			background:pink;
-		}
-		.con li:nth-child(5){
-			background:blue;
-		}
-
-	</style>
-
+	<meta charset="utf-8">
+	<title>体检报告TWO</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/MeReTwo.css">
 </head>
 <body>
-	<div class="outer">
-		<ul class="con">
-			<li>11</li>
-			<li>22</li>
-			<li>33</li>
-			<li>44</li>
-			<li>55</li>
-		</ul>
+	<div id="K_all">
+		<div id="K_title">
+			<span id="K_tone">体检报告</span>
+			<lable id="K_ttwo" for="abc">筛选
+				<!-- <select name="" id="">
+					<option value="">2001</option>
+					<option value="">2002</option>
+					<option value="">2003</option>
+					<option value="">2004</option>
+					<option value="">2005</option>
+					<option value="">2006</option>
+					<option value="">2007</option>
+					<option value="">2008</option>
+					<option value="">2009</option>
+					<option value="">2010</option>
+					<option value="">2011</option>
+					<option value="">2012</option>
+					<option value="">2013</option>
+					<option value="">2014</option>
+				</select> -->
+			</lable>
+		</div>
+		<div id="K_head">
+			<img src="../images/img_1@2x.png" alt="">
+			<h2>李富贵</h2>
+			<h4>北京市海淀区医院</h4>
+		</div>
+		<div id="K_con">
+			<div id="K_contao">
+				<div id="K_tabimg">
+					<img src="../images/img_1@12x.png" alt="">
+					<img src="../images/img_1@12x.png" alt="">
+					<img src="../images/img_1@12x.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div id="K_tail">
+			<div id="K_left">
+				<img src="../images/btn_3_n@2x.png" alt="" id="left">
+				<p>每日健康</p>
+			</div>
+			<div id="K_center">
+				<img src="../images/btn_4_h@2x.png" alt="" id="center">
+				<p>体检报告</p>
+			</div>
+			<div id="K_right">
+				<img src="../images/btn_5_n@2x.png" alt="" id="right">
+				<p>数据监测</p>
+			</div>
+		</div>
 	</div>
-	<button id="btn">点击我</button>
-	<p class="test-con">你好</p>	
+	<script src="jQuery/jquery-1.8.3.min.js"></script>
 	<script>
-		$(function(){
-			function a(e){
-				console.log(e);
-				var mouseLeft=e.originalEvent.targetTouches[0].clientX;
-				var scrollcon=$(".outer").scrollLeft();
-				console.log(scrollcon)
-				$(".con").on("touchmove",b)
-				function b(e){
-					$(".outer").scrollLeft(scrollcon+(mouseLeft-e.originalEvent.targetTouches[0].clientX)*3)
-				}
-				$(".con").on("touchend",function(){
-					$("#con").off("touchstart",a);
-					$(".con").off("touchmove",b)
-				})
-				
-			}
-			$(".con").on("touchstart",a)
-		})
-
-
-		// $(".con").on("touchstart",function(){
-		// 	var mouseLeft=e.originalEvent.targetTouches[0].clientX;
-		// 	var scrollcon=$(".outer").scrollLeft();
-		// 	$(".con").on("touchmove",function(){
-
-		// 	})
-		// 	$(".con").on("touchend",function(){
-		// 		$(".con").off("touchmove",function(){
-
-		// 		})
-		// 	})
-		// })
-
-
-		// $("#btn").on("click",function(){
-		// 	$(".test-con").css("background","red");
-		// })
-		$("#btn").on("touchend",function(){
-			$(".test-con").css("background","green");
-		})
-		$("#btn").on("click",function(){
-			$(".test-con").css("background","red");
-		})
+		function resetsize(){
+			var html=document.getElementsByTagName('html')[0];
+			var Ww=document.documentElement.clientWidth;
+			html.style.fontSize=Ww/750*100+"px";
+		}
+		resetsize();
+		window.onresize=function(){
+			resetsize();
+		}
+		//touch事件
+		
 	</script>
 </body>
 </html>
