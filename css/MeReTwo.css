@@ -1,0 +1,129 @@
+html{font-size:100px;}
+#K_all{
+	background:#f0f0f0;
+}
+#K_title{
+	height:0.88rem;
+	width:7.5rem;
+	background:#248f61;
+	/* text-align:center;
+	line-height:0.88rem; */
+}
+#K_tone{
+	float:left;
+	font:normal normal 0.34rem "微软雅黑";
+	color:#fefffd;
+	margin-top:0.2rem;
+	margin-left:3.11rem;
+}
+#K_ttwo{
+	font:normal normal 0.26rem "微软雅黑";
+	color:#fefffd;
+	float:right;
+	margin-top:0.32rem;
+	margin-right:0.2rem;
+}
+#K_head{
+	height:1.5rem;
+	width:7.5rem;
+	background:#fdfcf8;
+}
+#K_head img{
+	float:left;
+	margin-top:0.22rem;
+	margin-left:0.35rem;
+	width:1.06rem;
+	height:1.06rem;
+}
+#K_head h2{
+	float:left;
+	margin-top:0.25rem;
+	margin-left:0.27rem;
+	font:normal normal 0.34rem "微软雅黑";
+	color:#5c5c5c;
+}
+#K_head h4{
+	float:left;
+	margin-top:0.72rem;
+	margin-left:-1.035rem;
+	font:normal normal 0.26rem "微软雅黑";
+	color:#5c5c5c;
+}
+/* #K_con{
+	margin-top:0.22rem;
+	height:8.47rem;
+	width:7.5rem;
+	background:#fdfcf8;
+	border-bottom:1px solid #cacaca;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+#K_con #K_TabImg{
+	height:8.03rem;
+	overflow:hidden;
+}
+#K_con img{
+	width:6.56rem;
+} */
+#K_tail{
+	height:0.98rem;
+	width:7.5rem;
+	background:#fdfcf8;
+}
+#K_tail div{
+	float:left;
+	width:2.5rem;
+	height:0.98rem;
+	text-align:center;
+}
+#K_tail #left{
+	/* display:block; */
+	margin-top:0.1rem;
+	width:0.48rem;
+	height:0.42rem;
+	width:
+}
+#K_tail #center{
+	/* display:block; */
+	margin-top:0.1rem;
+	width:0.43rem;
+	height:0.42rem;
+}
+#K_tail #right{
+	/* display:block; */
+	margin-top:0.1rem;
+	width:0.49rem;
+	height:0.42rem;
+}
+
+#K_tail div p{
+	/* display:block; *//
+	/* margin-top:0rem; */
+	width:1.5rem;
+	height:0.24rem;
+	font-size:0.2rem;
+	font-weight:normal;
+	color:#5c5c5c;
+}
+#K_con{
+	background:#fdfcf8;
+	margin-top:0.22rem;
+}
+#K_contao{
+	background:#fdfcf8;
+	height:8.47rem;
+	width:6.56rem;
+	overflow:scroll;
+	border-bottom:1px solid #cacaca;
+	margin: 0 auto;
+}
+#K_tabimg{
+	width:10000rem;
+}
+#K_tabimg img{
+	margin-top:0.44rem;
+	width:6.57rem;
+	height:7.41rem;
+}
