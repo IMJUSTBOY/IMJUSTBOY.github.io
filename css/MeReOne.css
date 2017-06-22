@@ -23,6 +23,9 @@ html{font-size:100px;}
 	margin-top:0.32rem;
 	margin-right:0.2rem;
 }
+#K_ttwo select{
+	display:none;
+}
 #K_head{
 	height:1.5rem;
 	width:7.5rem;
@@ -104,6 +107,4 @@ html{font-size:100px;}
 	font-size:0.2rem;
 	font-weight:normal;
 	color:#5c5c5c;
-	
-
 }
