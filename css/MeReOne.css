@@ -23,7 +23,9 @@ html{font-size:100px;}
 	margin-top:0.32rem;
 	margin-right:0.2rem;
 }
-select{
+#K_ttwo select{
+	width:0.1rem;
+	height:0.1rem;
 	opacity:0;
 }
 #K_head{
