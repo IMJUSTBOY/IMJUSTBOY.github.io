@@ -2,19 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>体检报告ONE</title>
+	<title>体检报告TWO</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/MeReOne.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/MeReTwo.css">
 </head>
 <body>
 	<div id="K_all">
 		<div id="K_title">
 			<span id="K_tone">体检报告</span>
 			<lable id="K_ttwo" for="abc">筛选
-				<select name="" id="abc" >
+				<!-- <select name="" id="">
 					<option value="">2001</option>
 					<option value="">2002</option>
 					<option value="">2003</option>
@@ -29,11 +29,7 @@
 					<option value="">2012</option>
 					<option value="">2013</option>
 					<option value="">2014</option>
-					<option value="">2015</option>
-					<option value="">2016</option>
-					<option value="">2017</option>
-					<option value="">2018</option>
-				</select>
+				</select> -->
 			</lable>
 		</div>
 		<div id="K_head">
@@ -42,7 +38,13 @@
 			<h4>北京市海淀区医院</h4>
 		</div>
 		<div id="K_con">
-			<img src="../images/img_1@12x.png" alt="">
+			<div id="K_contao">
+				<div id="K_tabimg">
+					<img src="../images/img_1@12x.png" alt="">
+					<img src="../images/img_1@12x.png" alt="">
+					<img src="../images/img_1@12x.png" alt="">
+				</div>
+			</div>
 		</div>
 		<div id="K_tail">
 			<div id="K_left">
@@ -70,7 +72,50 @@
 		window.onresize=function(){
 			resetsize();
 		}
-		
+		//touch事件
+		$(function(){
+			function a(e){
+				console.log(e);
+				var mouseLeft=e.originalEvent.targetTouches[0].clientX;
+				var scrollcon=$("#K_contao").scrollLeft();
+				console.log(scrollcon)
+				$("K_tabimg").on("touchmove",b)
+				function b(e){
+					$("#K_contao").scrollLeft(scrollcon+(mouseLeft-e.originalEvent.targetTouches[0].clientX)*3)
+				}
+				$("K_tabimg").on("touchend",function(){
+					$("#con").off("touchstart",a);
+					$("K_tabimg").off("touchmove",b)
+				})
+				
+			}
+			$("K_tabimg").on("touchstart",a)
+		})
+
+
+		// $("K_tabimg").on("touchstart",function(){
+		// 	var mouseLeft=e.originalEvent.targetTouches[0].clientX;
+		// 	var scrollcon=$(".outer").scrollLeft();
+		// 	$("K_tabimg").on("touchmove",function(){
+
+		// 	})
+		// 	$("K_tabimg").on("touchend",function(){
+		// 		$("K_tabimg").off("touchmove",function(){
+
+		// 		})
+		// 	})
+		// })
+
+
+		// $("#btn").on("click",function(){
+		// 	$(".test-con").css("background","red");
+		// })
+		$("#btn").on("touchend",function(){
+			$(".test-con").css("background","green");
+		})
+		$("#btn").on("click",function(){
+			$(".test-con").css("background","red");
+		})
 	</script>
 </body>
 </html>
