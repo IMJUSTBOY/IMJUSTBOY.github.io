@@ -23,8 +23,8 @@ html{font-size:100px;}
 	margin-top:0.32rem;
 	margin-right:0.2rem;
 }
-#K_ttwo select{
-	display:none;
+select{
+	opacity:0;
 }
 #K_head{
 	height:1.5rem;
