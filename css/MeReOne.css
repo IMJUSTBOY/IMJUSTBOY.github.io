@@ -70,86 +70,21 @@ html{font-size:100px;}
 	width:6.56rem;
 	margin-bottom:0.61rem;
 }
+
+
 #K_tail{
-	height:0.98rem;
-	width:7.5rem;
-	background:#fdfcf8;
+	height:0.99rem;
 }
 #K_tail div{
 	float:left;
 	width:2.5rem;
-	height:0.98rem;
 	text-align:center;
 }
-#K_tail #K_LW{
-	/* display:block; */
-	/* margin-top:0.1rem; */
-	width:0.48rem;
-	height:0.42rem;
-	margin: 0.1rem auto;
-}
-#K_tail #K_CW{
-	/* display:block; */
-	/* margin-top:0.1rem; */
-	width:0.43rem;
-	height:0.42rem;
-	margin: 0.1rem auto;
-}
-#K_tail #K_RW{
-	/* display:block; */
-	/* margin-top:0.1rem; */
+#K_tail div img{
 	width:0.49rem;
-	height:0.42rem;
-	margin: 0.1rem auto;
+	height:0.42rem;	
+	margin-top:0.1rem;
 }
 
-#K_tail div p{
-	/* display:block; *//
-	/* margin-top:0rem; */
-	width:1.5rem;
-	height:0.24rem;
-	font-size:0.2rem;
-	font-weight:normal;
-	color:#5c5c5c;
-}
-#K_LG{
-	display:none;
-}
-#K_CG{
-	display:none;
-}
-#K_RG{
-	display:none;
-}
 
-#K_tail #K_LG{
-	/* display:block; */
-	/* margin-top:0.1rem; */
-	width:0.48rem;
-	height:0.42rem;
-	margin: 0.1rem auto;
-	
-}
-#K_tail #K_CG{
-	/* display:block; */
-	/* margin-top:0.1rem; */
-	width:0.43rem;
-	height:0.42rem;
-	margin: 0.1rem auto;
-}
-#K_tail #K_RG{
-	/* display:block; */
-	/* margin-top:0.1rem; */
-	width:0.49rem;
-	height:0.42rem;
-	margin: 0.1rem auto;
-}
-/* #K_left{
-	text-align:center;
-}
-#K_center{
-	text-align:center;
-}
-#K_center{
-	text-align:center;
-} */
+

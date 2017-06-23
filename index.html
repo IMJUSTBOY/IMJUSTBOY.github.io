@@ -47,25 +47,19 @@
 		<div id="K_tail">
 			<div id="K_left">
 				<img src="../images/btn_3_n@2x.png" alt="" id="K_LW">
-
-				<img src="../images/btn_1_h@2x.png" alt="" id="K_LG">
 				<p>每日健康</p>
 			</div>
 			<div id="K_center">
 				<img src="../images/btn_2_n@2x.png" alt="" id="K_CW">
-
-				<img src="../images/btn_4_h@2x.png" alt="" id="K_CG">
 				<p>体检报告</p>
 			</div>
 			<div id="K_right">
 				<img src="../images/btn_5_n@2x.png" alt="" id="K_RW">
-
-				<img src="../images/btn_9_h@2x.png" alt="" id="K_RG">
 				<p>数据监测</p>
 			</div>
 		</div>
 	</div>
-	<script src="../jQuery/jquery-1.8.3.min.js"></script>
+	<script src="jQuery/jquery-1.8.3.min.js"></script>
 	<script>
 		function resetsize(){
 			var html=document.getElementsByTagName('html')[0];
@@ -79,37 +73,30 @@
 
 
 		$('#K_left').click(function(){
-			$('#K_LG').css('display','block');
-			$('#K_LW').css('display','none');
-			$('#K_CG').css('display','none');
-			$('#K_CW').css('display','block');
-			$('#K_RG').css('display','none');
-			$('#K_RW').css('display','block');
+			$('#K_left img').attr('src','images/btn_1_h@2x.png');
 			$('#K_left p').css('color','#24905f');
-			$('#K_center p').css('color','#5c5c5a');
+			$('#K_center img').attr('src','images/btn_2_n@2x.png');
+			$('#K_right img').attr('src','images/btn_5_n@2x.png');
 			$('#K_right p').css('color','#5c5c5a');
+			$('#K_center p').css('color','#5c5c5a');
 		})
 		$('#K_center').click(function(){
-			$('#K_LG').css('display','none');
-			$('#K_LW').css('display','block');
-			$('#K_CG').css('display','block');
-			$('#K_CW').css('display','none');
-			$('#K_RG').css('display','none');
-			$('#K_RW').css('display','block');
-			$('#K_left p').css('color','#5c5c5a');
+			$('#K_center img').attr('src','images/btn_4_h@2x.png');
 			$('#K_center p').css('color','#24905f');
+			
+			$('#K_left img').attr('src','images/btn_3_n@2x.png');
+			$('#K_right img').attr('src','images/btn_5_n@2x.png');
 			$('#K_right p').css('color','#5c5c5a');
+			$('#K_left p').css('color','#5c5c5a');
 		})
 		$('#K_right').click(function(){
-			$('#K_LG').css('display','none');
-			$('#K_LW').css('display','block');
-			$('#K_CG').css('display','none');
-			$('#K_CW').css('display','block');
-			$('#K_RG').css('display','block');
-			$('#K_RW').css('display','none');
+			$('#K_right img').attr('src','images/btn_9_h@2x.png');
+			$('#K_right p').css('color','#24905f');
+			
+			$('#K_center img').attr('src','images/btn_2_n@2x.png');
+			$('#K_left img').attr('src','images/btn_3_n@2x.png');
 			$('#K_left p').css('color','#5c5c5a');
 			$('#K_center p').css('color','#5c5c5a');
-			$('#K_right p').css('color','#24905f');
 		})
 	</script>
 </body>
