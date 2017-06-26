@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		#all{
+			width:6.57rem;
+			height:7.41rem;
+			margin: 0 auto;
+			overflow:hidden;
+			border: 1px solid #000;
+		}
+		#con{
+			width:19.8rem;
+			height:7.41rem;
+		}
+		#con img{
+			float:left;
+			width:34%;
+			height:7.41rem;
+		}
+		#a{
+			width:34%;
+		}
+		#b{
+			width:34%;
+		}
+		#c{
+			width:34%;
+		}
+	</style>
+</head>
+<body>
+	<div id="all">
+		<div id="con">
+			<img src="../images/img_1@12x.png" alt="" id="a">
+			<img src="../images/img_1@12x.png" alt="" id="b">
+			<img src="../images/img_1@12x.png" alt="" id="c">
+		
+		</div>
+	</div>
+	<script src="../jQuery/jquery-1.8.3.min.js"></script>
+	<script src="../js/jquery.slides.min.js"></script>
+    <script src="../js/common.js"></script>
+	<script>
+		function resetsize(){
+			var html=document.getElementsByTagName('html')[0];
+			var Ww=document.documentElement.clientWidth;
+			html.style.fontSize=Ww/750*100+"px";
+		}
+		resetsize();
+		window.onresize=function(){
+			resetsize();
+		}
+
+
+		$(function(){
+			function a(e){
+				console.log(e);
+				var mouseLeft=e.originalEvent.targetTouches[0].clientX;
+				var scrollcon=$("#all").scrollLeft();
+				console.log(scrollcon)
+				$("#con").on("touchmove",b)
+				function b(e){
+					$("#all").scrollLeft(scrollcon+(mouseLeft-e.originalEvent.targetTouches[0].clientX)*3)
+				}
+				$("#con").on("touchend",function(){
+					$("#con").off("touchmove",b)
+				})
+				
+			}
+			$("#con").on("touchstart",a)
+
+
+
+			if($('#con').find('img').length > 1){
+				$('#con').slidesjs({
+					width:0.657,
+					height:0.741,
+					navigation:false,
+					play:{
+						auto: false,
+                        restartDelay: 2500
+					},
+					callback: {
+                        complete: function (number) {
+                            clearTimeout(slideTimer)
+                            var slideTimer = setTimeout(function () {
+                                $(".slidesjs-play").click();
+                            }, 4000)
+                        }
+                    }
+				});
+
+			}
+		})
+		// //翻页
+
+
+		// function touchSatrtFunc(evt) {
+	 //        var touch = evt.touches[0]; 
+	 //        var x = Number(touch.pageX); 
+	 //        var y = Number(touch.pageY);
+	 //        startX = x;
+	 //        startY = y;
+		// }
+
+		// function touchMoveFunc(evt) {
+		// 	var k = 6.57;
+	 //        var touch = evt.touches[0]; 
+	 //        var x = Number(touch.pageX); 
+	 //        var y = Number(touch.pageY); 
+	 //        // if (endX - startX > k/(2)) {
+	 //        //     swipeLeft();
+	 //        // } else if(en- startX< -k/(2)){
+	 //        //     swipeRight();
+	 //        // }
+  //   	} 
+
+		// function touchEndFunc(evt){
+		// 	var touch = evt.touches[0]; 
+	 //        var x = Number(touch.pageX); 
+	 //        var y = Number(touch.pageY);
+	 //        endX = x;
+	 //       	endY = y;
+	 //       	 if (endX - startX > k/(2)) {
+	 //            $('#con img').on('swipeLeft()',function(){
+	 //            	alert('FUCK YOU MOTHER');
+	 //            })
+	 //        } else if(en- startX< -k/(2)){
+	 //             $('#con img').on('swipeRight()',function(){
+	            	
+	 //            })
+	 //        }
+  //   	}
+		
+    	
+		
+
+
+		
+	</script>
+</body>
+</html>

@@ -6,8 +6,6 @@ html{font-size:100px;}
 	height:0.88rem;
 	width:7.5rem;
 	background:#248f61;
-	/* text-align:center;
-	line-height:0.88rem; */
 }
 #K_tone{
 	float:left;
@@ -60,8 +58,6 @@ html{font-size:100px;}
 	width:7.5rem;
 	background:#fdfcf8;
 	border-bottom:1px solid #cacaca;
-	/* text-align:center;
-	line-height:8.47rem; */
 	display: flex;
     justify-content: center;
     align-items: center;
@@ -70,8 +66,6 @@ html{font-size:100px;}
 	width:6.56rem;
 	margin-bottom:0.61rem;
 }
-
-
 #K_tail{
 	height:0.99rem;
 }
@@ -79,6 +73,7 @@ html{font-size:100px;}
 	float:left;
 	width:2.5rem;
 	text-align:center;
+	background:#fcfbf7;
 }
 #K_tail div img{
 	width:0.49rem;

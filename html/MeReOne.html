@@ -2,19 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>体检报告TWO</title>
+	<title>体检报告ONE</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
 	<link rel="stylesheet" href="../css/reset.css">
-	<link rel="stylesheet" href="../css/MeReTwo.css">
+	<link rel="stylesheet" href="../css/MeReOne.css">
 </head>
 <body>
 	<div id="K_all">
 		<div id="K_title">
 			<span id="K_tone">体检报告</span>
 			<lable id="K_ttwo" for="abc">筛选
-				<!-- <select name="" id="">
+				<select name="" id="abc" >
 					<option value="">2001</option>
 					<option value="">2002</option>
 					<option value="">2003</option>
@@ -29,7 +29,11 @@
 					<option value="">2012</option>
 					<option value="">2013</option>
 					<option value="">2014</option>
-				</select> -->
+					<option value="">2015</option>
+					<option value="">2016</option>
+					<option value="">2017</option>
+					<option value="">2018</option>
+				</select>
 			</lable>
 		</div>
 		<div id="K_head">
@@ -38,25 +42,19 @@
 			<h4>北京市海淀区医院</h4>
 		</div>
 		<div id="K_con">
-			<div id="K_contao">
-				<div id="K_tabimg">
-					<img src="../images/img_1@12x.png" alt="">
-					<img src="../images/img_1@12x.png" alt="">
-					<img src="../images/img_1@12x.png" alt="">
-				</div>
-			</div>
+			<img src="../images/img_1@12x.png" alt="">
 		</div>
 		<div id="K_tail">
 			<div id="K_left">
-				<img src="../images/btn_3_n@2x.png" alt="" id="left">
+				<img src="../images/btn_3_n@2x.png" alt="" id="K_LW">
 				<p>每日健康</p>
 			</div>
 			<div id="K_center">
-				<img src="../images/btn_2_n@2x.png" alt="" id="center">
+				<img src="../images/btn_2_n@2x.png" alt="" id="K_CW">
 				<p>体检报告</p>
 			</div>
 			<div id="K_right">
-				<img src="../images/btn_5_n@2x.png" alt="" id="right">
+				<img src="../images/btn_5_n@2x.png" alt="" id="K_RW">
 				<p>数据监测</p>
 			</div>
 		</div>
@@ -72,8 +70,34 @@
 		window.onresize=function(){
 			resetsize();
 		}
-		//touch事件
-		
+
+
+		$('#K_left').click(function(){
+			$('#K_left img').attr('src','../images/btn_1_h@2x.png');
+			$('#K_left p').css('color','#24905f');
+			$('#K_center img').attr('src','../images/btn_2_n@2x.png');
+			$('#K_right img').attr('src','../images/btn_5_n@2x.png');
+			$('#K_right p').css('color','#5c5c5a');
+			$('#K_center p').css('color','#5c5c5a');
+		})
+		$('#K_center').click(function(){
+			$('#K_center img').attr('src','../images/btn_4_h@2x.png');
+			$('#K_center p').css('color','#24905f');
+			
+			$('#K_left img').attr('src','../images/btn_3_n@2x.png');
+			$('#K_right img').attr('src','../images/btn_5_n@2x.png');
+			$('#K_right p').css('color','#5c5c5a');
+			$('#K_left p').css('color','#5c5c5a');
+		})
+		$('#K_right').click(function(){
+			$('#K_right img').attr('src','../images/btn_9_h@2x.png');
+			$('#K_right p').css('color','#24905f');
+			
+			$('#K_center img').attr('src','../images/btn_2_n@2x.png');
+			$('#K_left img').attr('src','../images/btn_3_n@2x.png');
+			$('#K_left p').css('color','#5c5c5a');
+			$('#K_center p').css('color','#5c5c5a');
+		})
 	</script>
 </body>
 </html>

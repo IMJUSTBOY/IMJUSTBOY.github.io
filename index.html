@@ -2,19 +2,19 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>体检报告ONE</title>
+	<title>体检报告TWO</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/MeReOne.css">
+	<link rel="stylesheet" href="css/MeReTwo.css">
 </head>
 <body>
 	<div id="K_all">
 		<div id="K_title">
 			<span id="K_tone">体检报告</span>
 			<lable id="K_ttwo" for="abc">筛选
-				<select name="" id="abc" >
+				<!-- <select name="" id="">
 					<option value="">2001</option>
 					<option value="">2002</option>
 					<option value="">2003</option>
@@ -29,37 +29,40 @@
 					<option value="">2012</option>
 					<option value="">2013</option>
 					<option value="">2014</option>
-					<option value="">2015</option>
-					<option value="">2016</option>
-					<option value="">2017</option>
-					<option value="">2018</option>
-				</select>
+				</select> -->
 			</lable>
 		</div>
 		<div id="K_head">
-			<img src="../images/img_1@2x.png" alt="">
+			<img src="images/img_1@2x.png" alt="">
 			<h2>李富贵</h2>
 			<h4>北京市海淀区医院</h4>
 		</div>
 		<div id="K_con">
-			<img src="../images/img_1@12x.png" alt="">
+			<div id="K_contao">
+				<div id="K_tabimg">
+					<img src="images/img_1@12x.png" alt="" class="one">
+					<img src="images/img_1@12x.png" alt="" class="one">
+					<img src="images/img_1@12x.png" alt="" class="one">
+				</div>
+			</div>
 		</div>
 		<div id="K_tail">
 			<div id="K_left">
-				<img src="../images/btn_3_n@2x.png" alt="" id="K_LW">
+				<img src="images/btn_3_n@2x.png" alt="" id="K_LW">
 				<p>每日健康</p>
 			</div>
 			<div id="K_center">
-				<img src="../images/btn_2_n@2x.png" alt="" id="K_CW">
+				<img src="images/btn_2_n@2x.png" alt="" id="K_CW">
 				<p>体检报告</p>
 			</div>
 			<div id="K_right">
-				<img src="../images/btn_5_n@2x.png" alt="" id="K_RW">
+				<img src="images/btn_5_n@2x.png" alt="" id="K_RW">
 				<p>数据监测</p>
 			</div>
 		</div>
 	</div>
 	<script src="jQuery/jquery-1.8.3.min.js"></script>
+	<script src="jQuery/jquery.slides.min.js"></script>
 	<script>
 		function resetsize(){
 			var html=document.getElementsByTagName('html')[0];
@@ -70,8 +73,62 @@
 		window.onresize=function(){
 			resetsize();
 		}
+		//#K_con的touch事件
+		$(function(){
+			function a(e){
+				console.log(e);
+				var mouseLeft=e.originalEvent.targetTouches[0].clientX;
+				var scrollcon=$("#K_contao").scrollLeft();
+				console.log(scrollcon)
+				$("#K_tabimg").on("touchmove",b)
+				function b(e){
+					$("#K_contao").scrollLeft(scrollcon+(mouseLeft-e.originalEvent.targetTouches[0].clientX)*3)
+				}
+				$("#K_tabimg").on("touchend",function(){
+					// $("#con").off("touchstart",a);
+					$("#K_tabimg").off("touchmove",b)
+				})
+				
+			}
+			$("#K_tabimg").on("touchstart",a)
 
 
+
+			if ($("#K_tabimg").find("img").length > 1) {
+                $("#K_tabimg").slidesjs({
+                    width: 750,
+                    height: 800,
+                    navigation: false,
+                    play: {
+                        auto: false,
+                        restartDelay: 2500
+                    },
+                    callback: {
+                        complete: function (number) {
+                            clearTimeout(slideTimer)
+                            var slideTimer = setTimeout(function () {
+                                $(".slidesjs-play").click();
+                            }, 4000)
+                        }
+                    }
+                });
+
+                $(".one").css('width','6.57rem');
+                $(".one").css('height','7.41rem');
+              	// var pagination = $(".bannerSlide").find(".slidesjs-pagination li").size() * 30;
+               //  $(".bannerSlide").find(".slidesjs-pagination").css("margin-left", "-" + pagination / 200 + "rem");
+                
+            }
+
+		})
+
+
+
+
+
+
+
+		//TAIL点击事件
 		$('#K_left').click(function(){
 			$('#K_left img').attr('src','images/btn_1_h@2x.png');
 			$('#K_left p').css('color','#24905f');
@@ -98,6 +155,8 @@
 			$('#K_left p').css('color','#5c5c5a');
 			$('#K_center p').css('color','#5c5c5a');
 		})
+		//Touch事件
+		
 	</script>
 </body>
 </html>
